@@ -4,7 +4,7 @@ title: "Resume"
 ---
 # Péter Vida - Software Developer
 
-## Contacts
+## Contact
 - Address: 1088 Budapest, Krúdy Gyula utca 11.
 - Phone: +36 20 291 4959
 - E-mail: 
@@ -38,6 +38,7 @@ title: "Resume"
 - Git - 4
 
 ### Languages
+- Hungarian (native)
 - English (pretty good) with B2 certificates
 - French (learning)
 - German (really rusty)
