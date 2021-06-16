@@ -1,0 +1,33 @@
+name: "Péter Vida"
+profession: "Software Developer"
+contact:
+  address: "adr"
+  phone: "ph"
+  email:
+    - personal: "pe"
+    - work:     "we"
+  socials:
+    - site: "ss1"
+      user: "su1"
+    - site: "ss2"
+      user: "su2"
+jobs:
+  - name: ""
+    desc: ""
+    positions:
+      - date:  ""
+        title: ""
+education:
+  - school: ""
+    date:   ""
+    degree: ""
+skills:
+  - skill: ""
+    level: ""
+languages:
+  - lang:  ""
+    level: ""
+projects:
+  - name: ""
+    repo: ""
+    desc: ""

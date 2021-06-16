@@ -1,7 +1,7 @@
 - name: Home
   link: /
 - name: Resume
-  link: '#' #resume.html
+  link: /resume.html
 - name: About
   link: /about.html
 - name: CV - raw
