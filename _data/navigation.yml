@@ -1,6 +1,8 @@
 - name: Home
   link: /
+- name: Resume
+  link: '#' #resume.html
 - name: About
   link: /about.html
-- name: Resume
-  link: /resume.md
+- name: CV - raw
+  link: /resume-md.html

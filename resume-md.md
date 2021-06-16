@@ -21,7 +21,7 @@ title: "Resume"
 
 ### Nokia Solutions and Networks
 - Co-operative Student, R&D Engineer: July 2017 - January 2018
-    - Extending automation capabilites of Atlassian products (mainly JIRA and Confluence)
+    - Extending automation capabilites of some Atlassian products (JIRA & Confluence)
 
 ## Education
 - Computer Science BSc @ Eötvös Lóránd University: September 2015 - January 2019
