@@ -1,3 +1,7 @@
+---
+layout: default
+title: "Resume"
+---
 # Péter Vida - Software Developer
 
 ## Contacts
