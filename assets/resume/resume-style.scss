@@ -24,10 +24,12 @@ body > header {
   display: grid;
 
   grid-template-areas: "image name contact";
-  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-columns: auto 3fr 2fr;
 }
-header > .image {
+header > img {
   grid-area: image;
+  border-radius: 50%;
+  max-height: 120px;
 }
 header > .name {
   grid-area: name;
