@@ -20,11 +20,11 @@ body {
   max-height: 29.7cm;
 }
 
-header {
+body > header {
   display: grid;
 
   grid-template-areas: "image name contact";
-  grid-template-columns: auto 2fr 1fr;
+  grid-template-columns: 2fr 3fr 2fr;
 }
 header > .image {
   grid-area: image;
@@ -34,6 +34,17 @@ header > .name {
 }
 header > .contact {
   grid-area: contact;
+}
+.contact > .contact-item {
+  display: grid;
+  grid-template-areas: "key value";
+  grid-template-columns: 1fr 2fr;
+}
+.contact-item > .key {
+  grid-area: key;
+}
+.contact-item > .value {
+  grid-area: value;
 }
 
 section {
@@ -55,7 +66,7 @@ section > .content {
   grid-template-areas: 
     "category  timeline"
     "category  description";
-  grid-template-columns: 2fr 6fr;
+  grid-template-columns: 2fr 5fr;
 }
 .category {
   grid-area: category;
@@ -72,7 +83,7 @@ section > .content {
   display: grid;
 
   grid-template-areas: "date title";
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 2fr;
 }
 .timeline-item > .date {
   grid-area: date;
@@ -87,7 +98,7 @@ ol.timeline {
 section.skills {
   display: grid;
   grid-template-areas: "category content";
-  grid-template-columns: 2fr 6fr;
+  grid-template-columns: 2fr 5fr;
 }
 
 .skills > .content {

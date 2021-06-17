@@ -1,6 +1,9 @@
 ---
 title: Péter Vida - Resume
+email-type: work
 ---
+{% assign resume = site.data.resume %}
+
 <!doctype html>
 <html>
   <head>
@@ -16,47 +19,62 @@ title: Péter Vida - Resume
         </svg>
       </div>
       <div class="name">
-        name
+        <div>{{ resume.name }}</div>
+        <div>{{ resume.profession }}</div>
       </div>
       <div class="contact">
-        contact info
+        {% assign contact = resume.contact %}
+        <div class="contact-item">
+          <span class="key">Address</span>
+          <span class="value">{{ contact.address }}</span>
+        </div>
+        <div class="contact-item">
+          <span class="key">Phone</span>
+          <span class="value">{{ contact.phone.personal }}</span>
+        </div>
+        <div class="contact-item">
+          <span class="key">E-mail</span>
+          <span class="value">{{ contact.email[page.email-type] }}</span>
+        </div>
+        {% for social in contact.socials %}
+        <div class="contact-item">
+          <span class="key">{{ social.display }}</span>
+          <span class="value"><a href="{{social.site}}{{social.user}}">{{social.user}}</a></span>
+        </div>
+        {% endfor %}
       </div>
     </header>
     <section id="experience">
       <header>Work Experience</header>
       <div class="content">
+        {% for job in resume.jobs %}
         <div class="content-item">
-          <div class="category">Unify</div>
-          <ol class="timeline">
-            <li class="timeline-item">
-              <span class="date">1-2</span>
-              <span class="title">titel</span>
-            </li>
-            <li class="timeline-item">
-              <span class="date">1-2</span>
-              <span class="title">titel</span>
-            </li>
-          </ol>
-          <div class="description">asd</div>
-        </div>
-        <div class="content-item">
-          <div class="category">Nokia</div>
-          <div class="timeline timeline-item">
-            <span class="date">1-2</span>
-            <span class="title">titel</span>
+          <div class="category">{{ job.name }}</div>
+          <div class="timeline">
+            {% for pos in job.positions %}
+            <div class="timeline-item">
+              <span class="date">{{ pos.date }}</span>
+              <span class="title">{{ pos.title }}</span>
+            </div>
+            {% endfor %}
           </div>
-          <div class="description">asd</div>
+          <div class="description">{{ job.desc }}</div>
         </div>
+        {% endfor %}
       </div>
     </section>
     <section id="education">
       <header>Education</header>
-      <div class="content content-item">
-        <div class="category">ELTE</div>
-        <div class="timeline timeline-item">
-          <span class="date">1-2</span>
-          <span class="title">titel</span>
+      <div class="content">
+        {% for edu in resume.education %}
+        <div class="content-item">
+          <div class="category">{{ edu.school }}</div>
+          <div class="timeline timeline-item">
+              <span class="date">{{ edu.date }}</span>
+              <span class="title">{{ edu.degree }}</span>
+          </div>
         </div>
+        {% endfor %}
       </div>
     </section>
     <section id="key-skills" class="skills">
