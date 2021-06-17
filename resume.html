@@ -16,21 +16,21 @@ email-type: work
     <header>
       <img src="/assets/resume/image.jpeg" />
       <div class="name">
-        <div>{{ resume.name }}</div>
-        <div>{{ resume.profession }}</div>
+        <h1>{{ resume.name }}</h1>
+        <h2>{{ resume.profession }}</h2>
       </div>
       <div class="contact">
         {% assign contact = resume.contact %}
         <div class="contact-item">
-          <span class="key">Address</span>
+          <span class="key">a:</span>
           <span class="value">{{ contact.address }}</span>
         </div>
         <div class="contact-item">
-          <span class="key">Phone</span>
+          <span class="key">p:</span>
           <span class="value">{{ contact.phone[page.phone-type] }}</span>
         </div>
         <div class="contact-item">
-          <span class="key">E-mail</span>
+          <span class="key">e:</span>
           <span class="value">{{ contact.email[page.email-type] }}</span>
         </div>
         {% for social in contact.socials %}

@@ -9,10 +9,10 @@ contact:
     work:     "peter.vida@atos.net"
   socials:
     - site:    "https://www.linkedin.com"
-      display: "LinkedIn"
+      display: "li:"
       user:    "/in/péter-vida-961958121"
     - site:    "https://github.com"
-      display: "GitHub"
+      display: "gh:"
       user:    "/petii"
 
 jobs:

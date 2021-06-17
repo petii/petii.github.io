@@ -18,6 +18,8 @@ body {
   
   max-width: 21cm;
   max-height: 29.7cm;
+
+  font: 1em system-ui;
 }
 
 body > header {
@@ -33,6 +35,10 @@ header > img {
 }
 header > .name {
   grid-area: name;
+
+  margin: 1em;
+  border-bottom: 0.1em solid black;
+  border-spacing: 1em;
 }
 header > .contact {
   grid-area: contact;
@@ -40,7 +46,7 @@ header > .contact {
 .contact > .contact-item {
   display: grid;
   grid-template-areas: "key value";
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 10fr;
 }
 .contact-item > .key {
   grid-area: key;
