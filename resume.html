@@ -1,5 +1,6 @@
 ---
 title: Péter Vida - Resume
+phone-type: personal
 email-type: work
 ---
 {% assign resume = site.data.resume %}
@@ -30,7 +31,7 @@ email-type: work
         </div>
         <div class="contact-item">
           <span class="key">Phone</span>
-          <span class="value">{{ contact.phone.personal }}</span>
+          <span class="value">{{ contact.phone[page.phone-type] }}</span>
         </div>
         <div class="contact-item">
           <span class="key">E-mail</span>
@@ -80,15 +81,19 @@ email-type: work
     <section id="key-skills" class="skills">
       <header>Key Skills</header>
       <div class="content">
-        <div>asd</div>
-        <div>asd</div>
+        {% for s in resume.skills %}
+        <div>
+          {{ s.skill }} ({{ s.level }})
+        </div> 
+        {% endfor %}
       </div>
     </section>
     <section id="languages" class="skills">
       <header>Languages</header>
       <div class="content">
-        <div>asd</div>
-        <div>asd</div>
+        {% for l in resume.languages %}
+        <div>{{ l.lang }} ({{ l.level }})</div>
+        {% endfor %}
       </div>
     </section>
     <section id="projects">
