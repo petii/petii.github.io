@@ -74,24 +74,6 @@ email-type: work
         {% endfor %}
       </div>
     </section>
-    <section id="key-skills" class="skills">
-      <header>Key Skills</header>
-      <div class="content">
-        {% for s in resume.skills %}
-        <div>
-          {{ s.skill }} ({{ s.level }})
-        </div> 
-        {% endfor %}
-      </div>
-    </section>
-    <section id="languages" class="skills">
-      <header>Languages</header>
-      <div class="content">
-        {% for l in resume.languages %}
-        <div>{{ l.lang }} ({{ l.level }})</div>
-        {% endfor %}
-      </div>
-    </section>
     <section id="projects">
       <header>Personal Projects</header>
       <div class="content">
@@ -109,6 +91,24 @@ email-type: work
             </div>
           </div>
         </div>
+        {% endfor %}
+      </div>
+    </section>
+    <section id="key-skills" class="skills">
+      <header>Key Skills</header>
+      <div class="content">
+        {% for s in resume.skills %}
+        <div>
+          {{ s.skill }} ({{ s.level }})
+        </div> 
+        {% endfor %}
+      </div>
+    </section>
+    <section id="languages" class="skills">
+      <header>Languages</header>
+      <div class="content">
+        {% for l in resume.languages %}
+        <div>{{ l.lang }} ({{ l.level }})</div>
         {% endfor %}
       </div>
     </section>

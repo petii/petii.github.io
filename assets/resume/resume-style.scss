@@ -6,7 +6,7 @@
 }
 
 html {
-  background-color: white;
+  background-color: whitesmoke;
 }
 
 body {
@@ -26,7 +26,9 @@ body > header {
   display: grid;
 
   grid-template-areas: "image name contact";
-  grid-template-columns: auto 3fr 2fr;
+  grid-template-columns: auto 4fr 3fr;
+
+  margin-bottom: 1em;
 }
 header > img {
   grid-area: image;
@@ -37,8 +39,6 @@ header > .name {
   grid-area: name;
 
   margin: 1em;
-  border-bottom: 0.1em solid black;
-  border-spacing: 1em;
 }
 header > .contact {
   grid-area: contact;
@@ -47,9 +47,12 @@ header > .contact {
   display: grid;
   grid-template-areas: "key value";
   grid-template-columns: 1fr 10fr;
+  grid-column-gap: 0.2em;
 }
 .contact-item > .key {
   grid-area: key;
+
+  text-align: right;
 }
 .contact-item > .value {
   grid-area: value;
@@ -62,7 +65,20 @@ section {
     "content";
 }
 section > header {
-  grid-area: category
+  grid-area: category;
+
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.6em;
+}
+section > header::after {
+  content: "";
+  margin: 0.7em 1em 0.3em 1em;
+  padding: 0;
+  max-height: 0.1em;
+  // min-width: max;
+  flex-grow: 1;
+  border-bottom: thin solid black;
 }
 section > .content {
   grid-area: content;
@@ -78,6 +94,8 @@ section > .content {
 }
 .category {
   grid-area: category;
+
+  font-size: 1.2em;
 }
 .description {
   grid-area: description;
