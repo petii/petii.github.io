@@ -14,6 +14,7 @@ contact:
     - site:    "https://github.com"
       display: "GitHub"
       user:    "/petii"
+
 jobs:
   - name: "Atos/Unify"
     desc: "Working on OpenScape Xpert and related projects"
@@ -23,14 +24,52 @@ jobs:
       - date:  "May 2018 - March 2019"
         title: "Software Developer Intern"
   - name: "Nokia Solutions and Networks"
-    desc: "Extending automation capabilites of some Atlassian products (JIRA & Confluence)"
+    desc: >-
+      Extending automation capabilites of some Atlassian products
+      (JIRA & Confluence)
     positions:
       - date:  "July 2017 - Jan. 2018"
         title: "Co-operative Student, R&D Engineer"
+
 education:
   - school: "Eötvös Lóránd University"
     date:   "Sept. 2015 - Jan. 2019"
     degree: "Computer Science BSc"
+
+projects:
+  - name: "petii.github.io"
+    repo: "https://github.com/petii/petii.github.io"
+    desc: "Portfolio website in the making."
+    tech: [HTML, Markdown, CSS, Jekyll, Liquid, TypeScript]
+  - name: "ppylttry"
+    repo: "https://github.com/petii/ppylttry"
+    desc: >-
+      Small learning project for ML and neural networks with the goal to guess
+      lottery numbers or make pretty images, whichever comes first.
+    tech: [Python, PyTorch]
+  - name: "Yet Another Retro Regulator"
+    repo: "https://github.com/petii/yarr"
+    desc: >-
+      A web application to help arrange agile retrospective meetings remotely.
+    tech: [C#, ASP.Net Core, TypeScript, HTML, Bootstrap, Angular, Mithril.js]
+  - name: "Booples"
+    repo: "https://github.com/petii/catching-booples"
+    desc: >-
+      Simple mobile game in Unity. Sadly a sudden increase in university 
+      responsibilities put an end to the project and I have not picked it up 
+      again as of now. The core mechanics are there, more content and a lot of 
+      polish is still left to do."
+    tech: [C#, Unity, Digital Drawing, Inkscape]
+
+languages:
+  - lang:  "Hungarian"
+    level: "native"
+  - lang:  "English"
+    level: "pretty good, B2 certificate"
+  - lang:  "French"
+    level: "learning"
+  - lang:  "German"
+    level: "really rusty"
 skills:
   - skill: "Ada"
     level: "3"
@@ -48,17 +87,3 @@ skills:
     level: "3"
   - skill: "Git"
     level: "4"
-languages:
-  - lang:  "Hungarian"
-    level: "native"
-  - lang:  "English"
-    level: "pretty good, B2 certificate"
-  - lang:  "French"
-    level: "learning"
-  - lang:  "German"
-    level: "really rusty"
-projects:
-  - name: ""
-    repo: ""
-    desc: ""
-    tech: []

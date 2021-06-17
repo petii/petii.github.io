@@ -99,10 +99,21 @@ email-type: work
     <section id="projects">
       <header>Personal Projects</header>
       <div class="content">
+        {% for project in resume.projects %}
         <div class="content-item">
-          <div class="category">project name</div>
-          <div class="description">project description</div>
+          <div class="category">
+            <a href="{{ project.repo }}">{{ project.name }}</a>
+          </div>
+          <div class="description">
+            <div>{{ project.desc }}</div>
+            <div>
+              {% for t in project.tech %}
+              <span>{{ t }}</span>
+              {% endfor %}
+            </div>
+          </div>
         </div>
+        {% endfor %}
       </div>
     </section>
   </body>
