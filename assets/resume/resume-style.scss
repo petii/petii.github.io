@@ -46,7 +46,7 @@ header > .name {
 
   margin: 1em;
 }
-header > .name > h2 {
+header > .name > h1 {
   color: var(--accent-color);
 }
 header > .contact {
@@ -163,14 +163,40 @@ section.skills {
 }
 
 .list-item {
-  padding: 0.2em;
+  // padding: 0.2em;
+
+  display: grid;
+  grid-template-areas: "name fig sep"
+                       "desc fig sep";
 }
-.list-item::after {
-  content: "";
-  padding: 0 0.2em;
-  border-right: thin solid var(--accent-color);
+.list-item > .name {
+  grid-area: name;
 }
-.list-item.last::after {
+.list-item > .fig {
+  grid-area: fig;
+  padding-left: 0.5em;
+}
+.list-item > .fig > div {
+  display: inline-block;
+  margin: 0.4em -0.05em 0em -0.05em;
+  padding: 0.3em 0.2em;
+  border-radius: 0.2em;
+  border: thin solid var(--accent-color);
+}
+.list-item > .fig > div.fill {
+  background-color: var(--accent-color);
+}
+.list-item > .desc {
+  grid-area: desc;
+  text-align: right;
+  color: var(--accent-color);
+}
+.list-item.withsep::after {
   content: "";
-  border-right: none;
+  grid-area: sep;
+  padding: 0.3em 0.1em;
+  margin: 0.4em 0.3em 0.4em 0.1em;
+  // border-radius: 50%;
+  // height: inherit;
+  border-right: thin solid lightgray;
 }

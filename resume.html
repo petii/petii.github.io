@@ -97,8 +97,23 @@ email-type: work
         {% for s in resume.skills %}
         <div class="list-item
                     skill
-                    {% if s == resume.skills.last %}last{% endif %}">
-          {{ s.skill }} 
+                    {% if s != resume.skills.last %}withsep{% endif %}">
+          <div class="name">
+            {{ s.skill }} 
+          </div>
+          <div class="fig">
+            {% assign max_level = resume.skills | map: "level" | sort_natural | last | plus: 0 %}
+            {% for i in (1..max_level) %}
+              {% assign level = s.level | plus: 0 %}
+              <div class={% if level >= i %} "fill"
+                         {% else %} "nofill" {% endif %}></div>
+            {% endfor %}
+          </div>
+          {% if s.years %}
+          <div class="desc">
+            {{ s.years }}
+          </div>
+          {% endif %}
           <!-- ({{ s.level }}) -->
         </div> 
         {% endfor %}
@@ -110,9 +125,14 @@ email-type: work
         {% for l in resume.languages %}
         <div class="list-item
                     lang
-                    {% if l == resume.languages.last %}last{% endif %}">
-          {{ l.lang }} 
-          ({{ l.level }})
+                    {% if l != resume.languages.last %}withsep{% endif %}">
+          <div class="name">
+            {{ l.lang }} 
+          </div>
+          {% assign level = l.level | split: ", " %}
+          <div class="desc">
+            {{ level | first}}
+          </div>
         </div>
         {% endfor %}
       </div>
