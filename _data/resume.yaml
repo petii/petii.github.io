@@ -73,10 +73,8 @@ languages:
 skills:
   - skill: "Ada"
     level: 2
-    # years: 0.5
   - skill: "C++"
     level: 5
-    # years: 5
   - skill: "C#"
     level: 4
   - skill: "Java/Kotlin"

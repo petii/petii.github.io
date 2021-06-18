@@ -23,7 +23,13 @@ email-type: work
         {% assign contact = resume.contact %}
         <div class="contact-item">
           <span class="key">a:</span>
-          <span class="value">{{ contact.address }}</span>
+          {% assign address_parts = contact.address | split: ", " %}
+          <span class="value">
+            {% for a in address_parts %}
+              <span>{{ a }}</span>
+            {% endfor %}
+            <!-- {{ contact.address }} -->
+          </span>
         </div>
         <div class="contact-item">
           <span class="key">p:</span>
@@ -92,7 +98,7 @@ email-type: work
       </div>
     </section>
     <section id="key-skills" class="skills">
-      <header>Key Skills</header>
+      <header>Skills</header>
       <div class="content">
         {% for s in resume.skills %}
         <div class="list-item
