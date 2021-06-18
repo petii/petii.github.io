@@ -37,7 +37,8 @@ email-type: work
         </div>
         <div class="contact-item">
           <span class="key">e:</span>
-          <span class="value">{{ contact.email[page.email-type] }}</span>
+          {% assign mail = contact.email[page.email-type] %}
+          <span class="value"><a href="mailto:{{ mail }}">{{ mail }}</a></span>
         </div>
         {% for social in contact.socials %}
         <div class="contact-item">

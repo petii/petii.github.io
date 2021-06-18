@@ -49,6 +49,15 @@ body > header {
   margin-bottom: 1em;
 }
 
+a {
+  text-decoration: none;
+  // color: var(--accent-color);
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 header > img {
   grid-area: image;
   border-radius: 50%;
@@ -127,6 +136,7 @@ section > .content {
 
   font-size: 1.2em;
   text-align: left;
+  margin-left: 0.5em;
 }
 .description {
   grid-area: description;
