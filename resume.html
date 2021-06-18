@@ -79,16 +79,13 @@ email-type: work
       <div class="content">
         {% for project in resume.projects %}
         <div class="content-item">
-          <div class="category">
-            <a href="{{ project.repo }}">{{ project.name }}</a>
-          </div>
+          <div class="category">{{ project.name }}</div>
+          <div class="repo"><a href="{{ project.repo }}">{{ project.repo }}</a></div>
           <div class="description">
             <div>{{ project.desc }}</div>
-            <div>
-              {% for t in project.tech %}
-              <span>{{ t }}</span>
-              {% endfor %}
-            </div>
+            {% for t in project.tech %}
+            <span class="tech">{{ t }}</span>
+            {% endfor %}
           </div>
         </div>
         {% endfor %}
@@ -98,8 +95,11 @@ email-type: work
       <header>Key Skills</header>
       <div class="content">
         {% for s in resume.skills %}
-        <div>
-          {{ s.skill }} ({{ s.level }})
+        <div class="list-item
+                    skill
+                    {% if s == resume.skills.last %}last{% endif %}">
+          {{ s.skill }} 
+          <!-- ({{ s.level }}) -->
         </div> 
         {% endfor %}
       </div>
@@ -108,7 +108,12 @@ email-type: work
       <header>Languages</header>
       <div class="content">
         {% for l in resume.languages %}
-        <div>{{ l.lang }} ({{ l.level }})</div>
+        <div class="list-item
+                    lang
+                    {% if l == resume.languages.last %}last{% endif %}">
+          {{ l.lang }} 
+          ({{ l.level }})
+        </div>
         {% endfor %}
       </div>
     </section>

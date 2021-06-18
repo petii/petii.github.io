@@ -47,7 +47,7 @@ projects:
       Small learning project for ML and neural networks with the goal to guess
       lottery numbers or make pretty images, whichever comes first.
     tech: [Python, PyTorch]
-  - name: "Yet Another Retro Regulator"
+  - name: "Yet Another Retrospective Regulator"
     repo: "https://github.com/petii/yarr"
     desc: >-
       A web application to help arrange agile retrospective meetings remotely.
@@ -58,7 +58,7 @@ projects:
       Simple mobile game in Unity. Sadly a sudden increase in university 
       responsibilities put an end to the project and I have not picked it up 
       again as of now. The core mechanics are there, more content and a lot of 
-      polish is still left to do."
+      polish is still left to do.
     tech: [C#, Unity, Digital Drawing, Inkscape]
 
 languages:

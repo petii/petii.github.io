@@ -1,5 +1,9 @@
 ---
 ---
+:root {
+  --accent-color: #568563;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +24,8 @@ body {
   max-height: 29.7cm;
 
   font: 1em system-ui;
+
+  text-align: justify;
 }
 
 body > header {
@@ -39,6 +45,9 @@ header > .name {
   grid-area: name;
 
   margin: 1em;
+}
+header > .name > h2 {
+  color: var(--accent-color);
 }
 header > .contact {
   grid-area: contact;
@@ -63,6 +72,7 @@ section {
   grid-template-areas: 
     "category"
     "content";
+  margin-top: 1em;
 }
 section > header {
   grid-area: category;
@@ -70,6 +80,8 @@ section > header {
   display: flex;
   flex-wrap: wrap;
   font-size: 1.6em;
+  font-weight: bold;
+  color: var(--accent-color);
 }
 section > header::after {
   content: "";
@@ -78,7 +90,7 @@ section > header::after {
   max-height: 0.1em;
   // min-width: max;
   flex-grow: 1;
-  border-bottom: thin solid black;
+  border-bottom: thin solid var(--accent-color);
 }
 section > .content {
   grid-area: content;
@@ -91,18 +103,27 @@ section > .content {
     "category  timeline"
     "category  description";
   grid-template-columns: 2fr 5fr;
+
+  margin-top: 0.4em;
 }
 .category {
   grid-area: category;
 
   font-size: 1.2em;
+  text-align: left;
 }
 .description {
   grid-area: description;
+
+  margin-top: 0.2em;
 }
-.timeline {
+.timeline,
+.repo {
   grid-area: timeline;
 
+  margin-top: 0.3em;
+  
+  font-size: 0.9em;
 }
 
 .timeline-item {
@@ -110,12 +131,22 @@ section > .content {
 
   grid-template-areas: "date title";
   grid-template-columns: 1fr 2fr;
+  
 }
 .timeline-item > .date {
   grid-area: date;
 }
 .timeline-item > .title {
   grid-area: title;
+}
+
+.tech {
+  font-size: 0.6em;
+  margin: 0.1em;
+  padding: 0.3em 0.4em 0.4em 0.3em;
+  border-radius: 0.5em;
+  background-color: var(--accent-color);
+  color: white;
 }
 
 section.skills {
@@ -127,4 +158,19 @@ section.skills {
 .skills > .content {
   display: flex;
   flex-wrap: wrap;
+
+  margin-top: 0.4em;
+}
+
+.list-item {
+  padding: 0.2em;
+}
+.list-item::after {
+  content: "";
+  padding: 0 0.2em;
+  border-right: thin solid var(--accent-color);
+}
+.list-item.last::after {
+  content: "";
+  border-right: none;
 }
