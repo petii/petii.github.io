@@ -57,6 +57,12 @@ a {
 a:hover {
   text-decoration: underline;
 }
+section a::before { 
+  content: "[";
+}
+section a::after {
+  content: "]";
+}
 
 header > img {
   grid-area: image;
