@@ -5,8 +5,7 @@ contact:
   phone: 
     personal: "+36 20 291 4959"
   email:
-    personal: "petike997@gmail.com"
-    work:     "peter.vida@atos.net"
+    personal: "peter.von.vida@gmail.com"
   socials:
     - site:    "https://www.linkedin.com"
       display: "li:"
@@ -16,7 +15,7 @@ contact:
       user:    "/petii"
 
 jobs:
-  - name: "Atos/Unify"
+  - name: "Everbridge/Unify"
     desc: "Working on OpenScape Xpert and related projects"
     positions:
       - date:  "March 2019 - Present"
@@ -52,14 +51,6 @@ projects:
     desc: >-
       A web application to help arrange agile retrospective meetings remotely.
     tech: [C#, ASP.Net Core, TypeScript, HTML, Bootstrap, Angular, Mithril.js]
-  - name: "Booples"
-    repo: "https://github.com/petii/catching-booples"
-    desc: >-
-      Simple mobile game in Unity. Sadly a sudden increase in university 
-      responsibilities put an end to the project and I have not picked it up 
-      again as of now. The core mechanics are there, more content and a lot of 
-      polish is still left to do.
-    tech: [C#, Unity, Digital Drawing, Inkscape]
 
 languages:
   - lang:  "Hungarian"
