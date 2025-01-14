@@ -32,7 +32,7 @@ jobs:
     positions:
       - date: "Nov 2021 - Present"
         title: "Software Engineer"
-    tech: [React, TypeScript, Go, Docker, PostgreSQL]
+    tech: [React, Node, TypeScript, Go, Docker, PostgreSQL, Mongo]
   - name: "Atos > Everbridge"
     desc: >-
       Working on OpenScape Xpert Client (mission critical telco solution).
@@ -66,13 +66,24 @@ education:
   - school: "Eötvös Lóránd University"
     date:   "Sept 2015 - Jan 2019"
     degree: "Computer Science BSc"
-    # desc: >-
-    #   tbd
+#    desc: >-
+#      tbd
 
 projects:
+  - name: "Cuddly Carnival"
+    repo: https://github.com/petii/cuddly-carnival
+    desc: >-
+      After cutting facebook usage out of my life for the most part I realized
+      missing out on a number of events. The idea of a light mobile app that can
+      browse events and synchronize them into the calendar came up but unfortunately
+      before finishing the project the Graph API changed and did not return event
+      data anymore.
+    tech: [Flutter, Dart]
   - name: "petii.github.io"
     repo: "https://github.com/petii/petii.github.io"
-    desc: "Portfolio website in the making."
+    desc: >-
+      Portfolio website in the making.
+      <a href="https://petii.github.io/resume">Also houses a live version of this document.</a>
     tech: [HTML, Markdown, CSS, Jekyll, Liquid]
   - name: "ppylttry"
     repo: "https://github.com/petii/ppylttry"
@@ -80,11 +91,14 @@ projects:
       Small learning project for ML and neural networks with the goal to guess
       lottery numbers or make pretty images, whichever comes first.
     tech: [Python, PyTorch]
-  - name: "Yet Another Retrospective Regulator"
+  - name: "Yet Another Retro Regulator"
     repo: "https://github.com/petii/yarr"
     desc: >-
-      A web application to help arrange agile retrospective meetings remotely.
-    tech: [C#, ASP.Net Core, TypeScript, HTML, Bootstrap, Angular]
+      When lockdown hit we found ourselves struggling a bit with retrospective
+      meetings. As a learning project before jumping onto extending our internal
+      test report server I explored web development which to my surprise has
+      come a long way in the 10+ years I haven't looked at it.
+    tech: [C#, ASP.Net Core, TypeScript, Angular]
 
 # languages:
 #   - lang:  "Hungarian"

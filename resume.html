@@ -14,17 +14,17 @@ email-type: personal
   </head>
   <body>
     <header>
-      <img src="/assets/resume/image.jpeg" />
+      <img src="/assets/resume/image.jpeg"/>
       <div class="name">
         <h1>{{ resume.name }}</h1>
         <h2>{{ resume.profession }}</h2>
       </div>
       <div class="contact">
         {% for contact in resume.contact %}
-          <div class="contact-item">
-            <span class="icon">{{ contact.icon }}</span>
-            <span class="value"><a href="{{ contact.value }}">{{ contact.display }}</a></span>
-          </div>
+        <div class="contact-item">
+          <span class="icon">{{ contact.icon }}</span>
+          <span class="value"><a href="{{ contact.value }}">{{ contact.display }}</a></span>
+        </div>
         {% endfor %}
       </div>
     </header>
@@ -46,7 +46,7 @@ email-type: personal
             <div class="description">
               <p>{{ job.desc }}</p>
               {% for t in job.tech %}
-                <span class="tech">{{ t }}</span>
+              <span class="tech">{{ t }}</span>
               {% endfor %}
             </div>
           </div>
@@ -62,8 +62,8 @@ email-type: personal
           <div class="category">{{ edu.school }}</div>
           <div class="description-wrap">
             <div class="timeline timeline-item">
-                <span class="date">{{ edu.date }}</span>
-                <span class="title">{{ edu.degree }}</span>
+              <span class="date">{{ edu.date }}</span>
+              <span class="title">{{ edu.degree }}</span>
             </div>
             <div class="description">{{ edu.desc }}</div>
           </div>
@@ -77,48 +77,36 @@ email-type: personal
         {% for project in resume.projects %}
         <div class="content-item">
           <div class="category">{{ project.name }}</div>
-                    <div class="description-wrap">
-          <div class="repo tech-wrap">
-            <a href="{{ project.repo }}">{{ project.repo }}</a>
-            {% for t in project.tech %}
+          <div class="description-wrap">
+            <div class="repo tech-wrap">
+              <a href="{{ project.repo }}">{{ project.repo }}</a>
+              {% for t in project.tech %}
               <span class="tech">{{ t }}</span>
-            {% endfor %}
+              {% endfor %}
             </div>
-          <div class="repo"></div>
-          <div class="description">
-            <p>{{ project.desc }}</p>
+            <div class="repo"></div>
+            <div class="description">
+              <p>{{ project.desc }}</p>
+            </div>
           </div>
-        </div>
         </div>
         {% endfor %}
       </div>
     </section>
-<!--     <section id="skills">
-      <h1>skills and tech</h1>
-      <div class="content">
-        {% for s in resume.skills %}
-        <div class="list-item
-                    skill
-                    {% if s != resume.skills.last %}withsep{% endif %}">
-          <div class="name">
-            {{ s.skill }} 
-          </div>
-          <div class="fig">
-            {% assign max_level = resume.skills | map: "level" | sort_natural | last | plus: 0 %}
-            {% for i in (1..max_level) %}
-              {% assign level = s.level | plus: 0 %}
-              <div class={% if level >= i %} "fill"
-                         {% else %} "nofill" {% endif %}></div>
-            {% endfor %}
-          </div>
-          {% if s.years %}
-          <div class="desc">
-            {{ s.years }}
-          </div>
-          {% endif %}
-        </div> 
-        {% endfor %}
-      </div>
-    </section> -->
+    <!--<section id="skills">-->
+    <!--  <h1>skills and tech</h1>-->
+    <!--  <div class="content">-->
+    <!--    {% for skill in resume.skills %}-->
+    <!--    <div class="content-item">-->
+    <!--      <div class="category">{{ skill.name }}</div>-->
+    <!--      <div class="description-wrap">-->
+    <!--        <div class="description">-->
+    <!--          <p>{{ skill.desc }}</p>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--    {% endfor %}-->
+    <!--  </div>-->
+    <!--</section>-->
   </body>
 </html>
