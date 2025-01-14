@@ -29,57 +29,72 @@ email-type: personal
       </div>
     </header>
     <section id="experience">
-      <header>Work Experience</header>
+      <h1>work experience</h1>
       <div class="content">
         {% for job in resume.jobs %}
         <div class="content-item">
           <div class="category">{{ job.name }}</div>
-          <div class="timeline">
-            {% for pos in job.positions %}
-            <div class="timeline-item">
-              <span class="date">{{ pos.date }}</span>
-              <span class="title">{{ pos.title }}</span>
+          <div class="description-wrap">
+            <div class="timeline">
+              {% for pos in job.positions %}
+              <div class="timeline-item">
+                <span class="date">{{ pos.date }}</span>
+                <span class="title">{{ pos.title }}</span>
+              </div>
+              {% endfor %}
             </div>
-            {% endfor %}
+            <div class="description">
+              <p>{{ job.desc }}</p>
+              {% for t in job.tech %}
+                <span class="tech">{{ t }}</span>
+              {% endfor %}
+            </div>
           </div>
-          <div class="description">{{ job.desc }}</div>
         </div>
         {% endfor %}
       </div>
     </section>
     <section id="education">
-      <header>Education</header>
+      <h1>education</h1>
       <div class="content">
         {% for edu in resume.education %}
         <div class="content-item">
           <div class="category">{{ edu.school }}</div>
-          <div class="timeline timeline-item">
-              <span class="date">{{ edu.date }}</span>
-              <span class="title">{{ edu.degree }}</span>
+          <div class="description-wrap">
+            <div class="timeline timeline-item">
+                <span class="date">{{ edu.date }}</span>
+                <span class="title">{{ edu.degree }}</span>
+            </div>
+            <div class="description">{{ edu.desc }}</div>
           </div>
         </div>
         {% endfor %}
       </div>
     </section>
     <section id="projects">
-      <header>Personal Projects</header>
+      <h1>personal projects</h1>
       <div class="content">
         {% for project in resume.projects %}
         <div class="content-item">
           <div class="category">{{ project.name }}</div>
-          <div class="repo"><a href="{{ project.repo }}">{{ project.repo }}</a></div>
-          <div class="description">
-            <div>{{ project.desc }}</div>
+                    <div class="description-wrap">
+          <div class="repo tech-wrap">
+            <a href="{{ project.repo }}">{{ project.repo }}</a>
             {% for t in project.tech %}
-            <span class="tech">{{ t }}</span>
+              <span class="tech">{{ t }}</span>
             {% endfor %}
+            </div>
+          <div class="repo"></div>
+          <div class="description">
+            <p>{{ project.desc }}</p>
           </div>
+        </div>
         </div>
         {% endfor %}
       </div>
     </section>
-    <section id="key-skills" class="skills">
-      <header>Skills</header>
+    <section id="skills">
+      <h1>skills and tech</h1>
       <div class="content">
         {% for s in resume.skills %}
         <div class="list-item
@@ -101,26 +116,7 @@ email-type: personal
             {{ s.years }}
           </div>
           {% endif %}
-          <!-- ({{ s.level }}) -->
         </div> 
-        {% endfor %}
-      </div>
-    </section>
-    <section id="languages" class="skills">
-      <header>Languages</header>
-      <div class="content">
-        {% for l in resume.languages %}
-        <div class="list-item
-                    lang
-                    {% if l != resume.languages.last %}withsep{% endif %}">
-          <div class="name">
-            {{ l.lang }} 
-          </div>
-          {% assign level = l.level | split: ", " %}
-          <div class="desc">
-            {{ level | first}}
-          </div>
-        </div>
         {% endfor %}
       </div>
     </section>
