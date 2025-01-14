@@ -56,10 +56,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.repo a::before {
+.repo > a::before {
   content: "[";
 }
-.repo a::after {
+.repo > a::after {
   content: "]";
 }
 
