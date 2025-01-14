@@ -60,7 +60,7 @@ jobs:
     positions:
       - date:  "July 2017 - Jan 2018"
         title: "Co-operative Student, R&D Engineer"
-    tech: [Groovy, Javascript, HTML, Jira/Confluence Admin]
+    tech: [Groovy, Javascript, HTML, Jira/Confluence Server]
 
 education:
   - school: "Eötvös Lóránd University"

@@ -23,7 +23,7 @@ body {
   max-width: 21cm;
 /*  max-height: 29.7cm;*/
 
-  font-family: system-ui;
+  font-family: sans-serif;
 
   text-align: justify;
 }
@@ -37,6 +37,14 @@ body {
     border: none;
     margin: 0cm 1.2cm;
     padding: none;
+  }
+
+  section > h1 {
+    break-after: avoid;
+  }
+
+  .content-item {
+    break-inside: avoid;
   }
 }
 
@@ -164,11 +172,24 @@ section > .content {
 /*  margin-top: 0.2em;*/
 /*  font-size: 0.9em;*/
 /*  margin-left: 1em;*/
+  padding-top: 0.3em;
+/*  padding-left: 0;*/
+}
+
+.description > p {
+  padding-bottom: 0.2em;
+}
+
+.timeline {
+  font-style: italic;  
 }
 
 .timeline,
 .repo {
   grid-area: timeline;
+  font-size: 0.9em;
+
+
 /*  margin-left: 0.5em;*/
 
 /*  margin-top: 0.3em;*/
@@ -198,16 +219,16 @@ section > .content {
   flex-wrap: wrap;
 }
 .tech {
-  font-size: 0.7em;
   max-height: fit-content;
   margin-top: auto;
 
-/*  margin: 0.1em;*/
+  font-size: 0.9em;
+
 /*  display: flex;*/
 /*padding-left: 0.1em;/**/
 /*padding-right: 0.1em;*/
-/*padding-top: 0.1em;*/
-/*padding-bottom: 0.1em;*/
+padding-top: 0.2em;
+padding-bottom: 0.1em;
   padding: 0.1em 0.5em;
 /*  padding: 0.3em 0.4em 0.4em 0.3em;*/
   border-radius: 0.8em;
