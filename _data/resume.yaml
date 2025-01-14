@@ -1,27 +1,46 @@
 name: "Péter Vida"
 profession: "Software Developer"
 contact:
-  address: "1088 Budapest, Krúdy Gyula utca 11."
-  phone: 
-    personal: "+36 20 291 4959"
-  email:
-    personal: "peter.von.vida@gmail.com"
-  socials:
-    - site:    "https://www.linkedin.com"
-      display: "li:"
-      user:    "/in/péter-vida-961958121"
-    - site:    "https://github.com"
-      display: "gh:"
-      user:    "/petii"
+  - phone: 
+    icon: 📞
+    display: "+36 20 291 4959"
+    value: "tel:+36-20-291-4959"
+  - email:
+    icon: ✉️
+    display: "peter.von.vida@gmail.com"
+    value: "mailto:peter.von.vida@gmail.com"
+  - linkedin:
+    icon: >-
+      <img class="icon" src="/assets/resume/LinkedIn-Logos/LI-In-Bug.png" />
+    display: "/in/péter-vida-961958121"
+    value: "https://www.linkedin.com/in/péter-vida-961958121"
+  - github: 
+    icon: >-
+      <img class="icon" src="/assets/resume/github-mark/github-mark.svg" />
+    display: "/petii"
+    value: "https://github.com/petii"
 
 jobs:
-  - name: "Everbridge/Unify"
-    desc: "Working on OpenScape Xpert and related projects"
+  - name: "Tulip Interfaces"
+    desc: >-
+      tbd
+  - name: "Atos > Everbridge"
+    desc: >-
+      Working on OpenScape Xpert Client (mission critical telco solution).
+      Started as an intern while finishing up university then joined full-time.
+      Provided plenty of opportunities to grow both as a developer and as a 
+      person working in IT.
+      As a developer deepening my knowledge of modern C++14, getting experience
+      with legacy codebases, distributed solutions, CI pipelines, automated 
+      testing, linux development.
+      As a person, got to see the importance of clear communication, effective
+      planning and more of multi-national company culture.
     positions:
-      - date:  "March 2019 - Present"
+      - date:  "March 2019 - October 2021"
         title: "Software Engineer"
       - date:  "May 2018 - March 2019"
         title: "Software Developer Intern"
+    tech: [C++, Qt, CMake, Java, Jenkins]
   - name: "Nokia Solutions and Networks"
     desc: >-
       Extending automation capabilites of some Atlassian products
@@ -29,6 +48,7 @@ jobs:
     positions:
       - date:  "July 2017 - Jan. 2018"
         title: "Co-operative Student, R&D Engineer"
+    tech: [Groovy, HTML, ]
 
 education:
   - school: "Eötvös Lóránd University"

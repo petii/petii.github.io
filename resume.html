@@ -20,31 +20,11 @@ email-type: personal
         <h2>{{ resume.profession }}</h2>
       </div>
       <div class="contact">
-        {% assign contact = resume.contact %}
-        <div class="contact-item">
-          <span class="key">a:</span>
-          {% assign address_parts = contact.address | split: ", " %}
-          <span class="value">
-            {% for a in address_parts %}
-              <span>{{ a }}</span>
-            {% endfor %}
-            <!-- {{ contact.address }} -->
-          </span>
-        </div>
-        <div class="contact-item">
-          <span class="key">p:</span>
-          <span class="value">{{ contact.phone[page.phone-type] }}</span>
-        </div>
-        <div class="contact-item">
-          <span class="key">e:</span>
-          {% assign mail = contact.email[page.email-type] %}
-          <span class="value"><a href="mailto:{{ mail }}">{{ mail }}</a></span>
-        </div>
-        {% for social in contact.socials %}
-        <div class="contact-item">
-          <span class="key">{{ social.display }}</span>
-          <span class="value"><a href="{{social.site}}{{social.user}}">{{social.user}}</a></span>
-        </div>
+        {% for contact in resume.contact %}
+          <div class="contact-item">
+            <span class="icon">{{ contact.icon }}</span>
+            <span class="value"><a href="{{ contact.value }}">{{ contact.display }}</a></span>
+          </div>
         {% endfor %}
       </div>
     </header>

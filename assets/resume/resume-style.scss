@@ -70,26 +70,35 @@ header > img {
   max-height: 120px;
 }
 header > .name {
-  grid-area: name;
 
-  margin: 1em;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 1em;
 }
 header > .name > h1 {
   color: var(--accent-color);
 }
 header > .contact {
   grid-area: contact;
+
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .contact > .contact-item {
   display: grid;
-  grid-template-areas: "key value";
+  grid-template-areas: "icon value";
   grid-template-columns: 1fr 10fr;
   grid-column-gap: 0.2em;
 }
-.contact-item > .key {
-  grid-area: key;
+.contact-item > .icon {
+  grid-area: icon;
 
-  text-align: right;
+  text-align: center;
+ 
+  img.icon {
+    vertical-align: bottom;
+    max-height: 0.9lh;
+  }
 }
 .contact-item > .value {
   grid-area: value;
