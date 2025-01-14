@@ -66,6 +66,8 @@ education:
   - school: "Eötvös Lóránd University"
     date:   "Sept 2015 - Jan 2019"
     degree: "Computer Science BSc"
+    # desc: >-
+    #   tbd
 
 projects:
   - name: "petii.github.io"
@@ -82,31 +84,33 @@ projects:
     repo: "https://github.com/petii/yarr"
     desc: >-
       A web application to help arrange agile retrospective meetings remotely.
-    tech: [C#, ASP.Net Core, TypeScript, HTML, Bootstrap, Angular, Mithril.js]
+    tech: [C#, ASP.Net Core, TypeScript, HTML, Bootstrap, Angular]
 
-languages:
-  - lang:  "Hungarian"
-    level: "native"
-  - lang:  "English"
-    level: "pretty good, B2"
-  - lang:  "French"
-    level: "learning"
-  - lang:  "German"
-    level: "really rusty"
+# languages:
+#   - lang:  "Hungarian"
+#     level: "native"
+#   - lang:  "English"
+#     level: "pretty good, B2"
+#   - lang:  "French"
+#     level: "learning"
+#   - lang:  "German"
+#     level: "really rusty"
 skills:
-  - skill: "Ada"
-    level: 2
+  # - skill: "Ada"
+    # level: 2
   - skill: "C++"
-    level: 5
-  - skill: "C#"
-    level: 4
-  - skill: "Java/Kotlin"
-    level: 2
-  - skill: "Python"
-    level: 4
+    # level: 5
+  # - skill: "C#"
+    # level: 4
+  # - skill: "Java/Kotlin"
+    # level: 2
+  # - skill: "Python"
+    # level: 4
   - skill: "TypeScript"
-    level: 3
-  - skill: "HTML/CSS"
-    level: 3
+    # level: 3
+  - skill: "Go"
+  # - skill: "HTML/CSS"
+    # level: 3
   - skill: "Git"
-    level: 4
+    # level: 4
+
