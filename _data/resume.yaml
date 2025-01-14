@@ -39,7 +39,7 @@ jobs:
       Started as an intern while finishing up university then joined full-time.
       Provided plenty of opportunities to grow both as a developer and as a 
       person working in IT. <br />
-      As a developer deepening my knowledge of modern C++14, getting experience
+      As a developer deepening my knowledge of C++14, getting experience
       with legacy codebases, distributed solutions, CI pipelines, automated 
       testing, linux development. <br />
       As a person, got to see the importance of clear communication, effective
@@ -113,6 +113,21 @@ skills:
   # - skill: "Ada"
     # level: 2
   - skill: "C++"
+    desc: >-
+      Used it as the tool to teach myself some basic concepts like OOP during
+      highschool which lasted well into university studies. When I learnt about
+      "modern C++" I had a newfound fascination with the language and compile
+      time validation in general.
+      Stopped keeping up with the newer standards which is quite unfortunate
+      as constraints and concepts seem like a great addition to templating
+      and it would be nice to experience modules after years and years of
+      writing ifndefs.
+  - skill: "TypeScript"
+    desc: >-
+      tbd
+  - skill: "Go"
+    desc: >-
+      tbd
     # level: 5
   # - skill: "C#"
     # level: 4
@@ -120,9 +135,7 @@ skills:
     # level: 2
   # - skill: "Python"
     # level: 4
-  - skill: "TypeScript"
     # level: 3
-  - skill: "Go"
   # - skill: "HTML/CSS"
     # level: 3
   - skill: "Git"
