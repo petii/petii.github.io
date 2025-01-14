@@ -23,43 +23,55 @@ contact:
 jobs:
   - name: "Tulip Interfaces"
     desc: >-
-      tbd
+      Joined the freshly formed Budapest team. Immediately found myself as a 
+      web developer helping to push a project across the finish line. Then
+      the team took ownership of an abandoned part of the product, where the
+      experience of working with legacy systems became helpful. Slowly
+      transitioned away from front-end to work on topics related to runtime
+      data persistence.
+    positions:
+      - date: "Nov 2021 - Present"
+        title: "Software Engineer"
+    tech: [React, TypeScript, Go, Docker, PostgreSQL]
   - name: "Atos > Everbridge"
     desc: >-
       Working on OpenScape Xpert Client (mission critical telco solution).
       Started as an intern while finishing up university then joined full-time.
       Provided plenty of opportunities to grow both as a developer and as a 
-      person working in IT.
+      person working in IT. <br />
       As a developer deepening my knowledge of modern C++14, getting experience
       with legacy codebases, distributed solutions, CI pipelines, automated 
-      testing, linux development.
+      testing, linux development. <br />
       As a person, got to see the importance of clear communication, effective
       planning and more of multi-national company culture.
     positions:
-      - date:  "March 2019 - October 2021"
+      - date:  "March 2019 - Oct 2021"
         title: "Software Engineer"
       - date:  "May 2018 - March 2019"
         title: "Software Developer Intern"
     tech: [C++, Qt, CMake, Java, Jenkins]
-  - name: "Nokia Solutions and Networks"
+  - name: "Nokia"
     desc: >-
-      Extending automation capabilites of some Atlassian products
-      (JIRA & Confluence)
+      Joined a team of 3 other interns on a new project that set out to automate
+      the company's internal processes. With no technical leadership and 
+      arbitrary restrictions due to the intern status, it was a bit chaotic and
+      hacky at times but we managed to prove the value of the project and got 
+      internal funding.
     positions:
-      - date:  "July 2017 - Jan. 2018"
+      - date:  "July 2017 - Jan 2018"
         title: "Co-operative Student, R&D Engineer"
-    tech: [Groovy, HTML, ]
+    tech: [Groovy, Javascript, HTML, Jira/Confluence Admin]
 
 education:
   - school: "Eötvös Lóránd University"
-    date:   "Sept. 2015 - Jan. 2019"
+    date:   "Sept 2015 - Jan 2019"
     degree: "Computer Science BSc"
 
 projects:
   - name: "petii.github.io"
     repo: "https://github.com/petii/petii.github.io"
     desc: "Portfolio website in the making."
-    tech: [HTML, Markdown, CSS, Jekyll, Liquid, TypeScript]
+    tech: [HTML, Markdown, CSS, Jekyll, Liquid]
   - name: "ppylttry"
     repo: "https://github.com/petii/ppylttry"
     desc: >-
