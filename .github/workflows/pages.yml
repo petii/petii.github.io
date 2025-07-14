@@ -17,7 +17,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+    defaults:
+      run:
+        working-directory: ./www
+
     permissions:
       contents: read
     
@@ -28,12 +31,18 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      # TODO: build
+      - name: Init NPM project
+        run: npm install
+
+      - name: Build site
+        id: astro-build
+        run: npm run build
       
       - name: Upload artifact
+        id: artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ env.BUILD_PATH }}/dist
+          path: ./dist
 
   deploy:
     needs: build
