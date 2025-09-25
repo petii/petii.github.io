@@ -7,13 +7,13 @@ contact:
     value: "tel:+36-20-291-4959"
   - email:
     icon: ✉️
-    display: "peter.von.vida@gmail.com"
-    value: "mailto:peter.von.vida@gmail.com"
+    display: "mail@petii.dev"
+    value: "mailto:mail@petii.dev"
   - linkedin:
     icon: >-
       <img class="icon" src="/assets/resume/LinkedIn-Logos/LI-In-Bug.png" />
-    display: "/in/péter-vida-961958121"
-    value: "https://www.linkedin.com/in/péter-vida-961958121"
+    display: "/in/petii"
+    value: "https://www.linkedin.com/in/petii"
   - github: 
     icon: >-
       <img class="icon" src="/assets/resume/github-mark/github-mark.svg" />
@@ -32,7 +32,7 @@ jobs:
     positions:
       - date: "Nov 2021 - Present"
         title: "Software Engineer"
-    tech: [React, Node, TypeScript, Go, Docker, PostgreSQL, Mongo]
+    tech: [React, Node, TypeScript, Go, Docker, Kubernetes, PostgreSQL, Mongo]
   - name: "Atos > Everbridge"
     desc: >-
       Working on OpenScape Xpert Client (mission critical telco solution).
