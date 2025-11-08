@@ -31,12 +31,16 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
       - name: Init NPM project
-        run: npm install
+        run: bun install
 
       - name: Build site
         id: astro-build
-        run: npm run build
+        run: bun run build
 
       - name: Upload artifact
         id: artifacts
