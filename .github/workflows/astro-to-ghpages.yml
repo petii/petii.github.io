@@ -3,7 +3,7 @@ name: deploy astro site to github pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["try-astro"]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -12,7 +12,7 @@ on:
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -26,8 +26,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
-        with:
-          ref: 'try-astro'
 
       - name: Setup Pages
         id: pages
