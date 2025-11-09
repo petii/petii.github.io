@@ -1,0 +1,36 @@
+name: run checks for astro site
+
+on:
+  push:
+    paths:
+      - 'www/**'
+
+concurrency:
+  group: "www"
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./www
+
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - id: bun-i
+        run: bun install
+
+      - id: biome-check
+        run: bun x biome ci
+
+      - id: astro-check
+        run: bun x astro check
