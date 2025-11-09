@@ -1,12 +1,12 @@
 ---
 import { getCollection } from "astro:content";
 
-const personas = await getCollection('personas');
+const personas = await getCollection("personas");
 
-const {name,} = Astro.props;
+const { name } = Astro.props;
 ---
-<!-- <div class="hero"> -->
-<div>
-    hi, name's {name}. I'm a
-    { personas.map(({data: {persona}}) => <button>{persona}</button>)}
+
+<div class="hero">
+  hi, name's {name}. I'm a
+  {personas.map(({ data: { persona } }) => <button>{persona}</button>)}
 </div>

@@ -1,7 +1,13 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown.min.css";
+
 @import "tailwindcss";
 @plugin "daisyui";
 
+.markdown-body {
+  background-color: unset;
+}
+
 html {
-    scroll-behavior: smooth;
-    color-scheme: light dark;
+  scroll-behavior: smooth;
+  color-scheme: light dark;
 }
