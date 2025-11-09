@@ -1,0 +1,20 @@
+---
+import type { GetStaticPaths } from "astro";
+import PersonaPage from "../../layouts/persona-page.astro";
+import { getCollection } from "astro:content";
+
+
+export const getStaticPaths = (async () => {    
+    const personas = await getCollection('personas');
+    console.debug(personas, personas.map(p => p.rendered?.metadata))
+    return personas.map(({data: {persona}, rendered }) => ({params: {persona }, props: {
+        content: rendered?.html
+    }}));
+}) satisfies GetStaticPaths;
+
+const {persona} = Astro.params;
+const {content} = Astro.props;
+---
+<PersonaPage>
+    <div class="markdown-body" set:html={content} />
+</PersonaPage>
