@@ -1,12 +1,35 @@
 ---
-import { getCollection } from "astro:content";
+import { getSortedPersonas, personaDisplay } from "../data/personaEntry";
 
-const personas = await getCollection("personas");
+const personas = await getSortedPersonas();
 
+const { persona: activePersona } = Astro.params;
+console.debug("[persona-switcher]", { activePersona });
 const { name } = Astro.props;
 ---
 
 <div class="hero">
-  hi, name's {name}. I'm a
-  {personas.map(({ data: { persona } }) => <button>{persona}</button>)}
+  <div class="hero-content flex-row">
+    <div class="stack hidden sm:grid">
+      {personas.map(() => <div class="skeleton rounded-box h-40 w-40" />)}
+    </div>
+    <div class="prose flex-col">
+      <h1>
+        hi, name's {name}. I'm a...
+      </h1>
+      <div class="join join-vertical sm:join-horizontal container mx-auto">
+        {
+          personas.map(({ data: { persona } }) => (
+            <a
+              role="button"
+              class={`join-item btn ${activePersona === persona ? "btn-active" : ""}`}
+              href={`/persona/${persona}`}
+            >
+              {personaDisplay(persona)}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
 </div>

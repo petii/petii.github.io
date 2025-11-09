@@ -5,6 +5,7 @@ const personas = defineCollection({
   loader: glob({ base: "./src/data/personas", pattern: "*.md" }),
   schema: z.object({
     persona: z.string(),
+    rank: z.optional(z.number()),
   }),
 });
 
