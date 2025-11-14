@@ -10,5 +10,6 @@ export default defineConfig({
   },
   redirects: {
     "/": "/coming-soon",
+    "/persona": "/persona/programmer",
   },
 });
