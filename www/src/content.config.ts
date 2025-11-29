@@ -6,6 +6,7 @@ const personas = defineCollection({
   schema: z.object({
     persona: z.string(),
     rank: z.optional(z.number()),
+    profilePicUrl: z.optional(z.string()),
   }),
 });
 
