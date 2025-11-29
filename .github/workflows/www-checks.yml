@@ -2,8 +2,12 @@ name: run checks for astro site
 
 on:
   push:
+    branches-ignore: 'main' 
     paths:
       - 'www/**'
+
+  workflow_call:
+  
 
 concurrency:
   group: "www"

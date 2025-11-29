@@ -3,6 +3,8 @@ name: deploy astro site to github pages
 on:
   push:
     branches: ["main"]
+    paths:
+      - 'www/**'
 
   workflow_dispatch:
 
@@ -12,6 +14,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  checks:
+    uses: './.github/workflows/www-checks.yml'
+    
   build:
     runs-on: ubuntu-latest
     defaults:
@@ -44,9 +49,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'www/dist/'
-
+  
   deploy:
-    needs: build
+    needs: [build, checks]
 
     runs-on: ubuntu-latest
 
