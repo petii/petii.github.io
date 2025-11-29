@@ -13,5 +13,5 @@ export default defineConfig({
     "/": "/coming-soon",
     "/persona": "/persona/programmer",
   },
-  integrations: [mdx()]
+  integrations: [mdx()],
 });
